@@ -31,6 +31,8 @@ export TMOUT=0
 # just a safety option if accidentally using rm without any flags
 alias rm="rm -i"
 
+#safety to stop chmod function GL 3/27/2018
+alias chmod="echo Please do not use chmod on Qumulo, we are managing permission through Windows ACLs. Do not chmod"
 
 # important for qumulo
 # qumulo appears to read $USER umask when redirecting stdout
