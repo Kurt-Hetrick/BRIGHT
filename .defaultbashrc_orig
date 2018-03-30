@@ -1,0 +1,16 @@
+username=$(whoami | tr -d "WIN\\")
+#echo "User: "$username
+host=`hostname`
+#echo "Host: "$host
+
+# Source global definitions
+        # Get correct bash profile
+        if [ $host = "rac1" ]; then
+            echo "Read bashrc of $username"
+        else
+            echo "Reading in default bashrc"
+            source /mnt/users/skel/.bashrc
+            echo "Finished reading default .bashrc"
+        fi
+
+# User specific aliases and functions
