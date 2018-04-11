@@ -1,4 +1,4 @@
-username=$(whoami | tr -d "WIN\\")
+username=$(whoami | tr -d 'WIN\\')
 #echo "User: "$username
 host=`hostname`
 #echo "Host: "$host

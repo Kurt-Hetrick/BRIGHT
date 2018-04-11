@@ -21,7 +21,7 @@ if [ -d "$dir" ]; then
 	if [ -d "$priv" ]; then
 	    echo The $priv folder exists.
 	    cp -R /mnt/qadmin/users/skel/.defaultbashrc /mnt/qadmin/users/$username/priv/.bash_profile
-	    cp -R /mnt/qadmin/users/skel/.sge_request/qadmin/users/$username/priv/.sge_request
+	    ln -s /mnt/users/skel/.sge_request /mnt/qadmin/users/$username/priv/.sge_request
 	    echo Bashrc copied to priv
 	    chmod -R 700 $priv
             chown -R win\\$username:win\\jhg_all $priv
@@ -29,7 +29,7 @@ if [ -d "$dir" ]; then
 	    mkdir $priv
 	    echo No directory found $priv creating it
 	    cp -R /mnt/qadmin/users/skel/.defaultbashrc /mnt/qadmin/users/$username/priv/.bash_profile
-	    cp -R /mnt/qadmin/users/skel/.sge_request/qadmin/users/$username/priv/.sge_request
+	    ln -s /mnt/users/skel/.sge_request /mnt/qadmin/users/$username/priv/.sge_request
 	    chmod -R 700 $priv
             chown -R win\\$username:win\\jhg_all $priv
 	    echo Bashrc copied to priv
@@ -39,7 +39,7 @@ else
    mkdir $dir
    mkdir $priv
 	cp -R /mnt/qadmin/users/skel/.defaultbashrc /mnt/qadmin/users/$username/priv/.bash_profile
-	cp -R /mnt/qadmin/users/skel/.sge_request/qadmin/users/$username/priv/.sge_request
+	ln -s /mnt/users/skel/.sge_request /mnt/qadmin/users/$username/priv/.sge_request
  	echo Bashrc copied to priv
 	chmod -R 700 $priv
 	chown -R win\\$username:win\\jhg_all $dir
