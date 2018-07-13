@@ -1,0 +1,3 @@
+gethostbyname(c6100-8) took 20 seconds and returns TRY_AGAIN
+
+error: sge_gethostbyname failed

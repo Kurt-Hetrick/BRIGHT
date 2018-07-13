@@ -33,6 +33,6 @@ do
 	if [[ -z "$MEM_CHECK" ]]; then
 		:
 	else
-		echo $MEM_CHECK | sed 's/;/\n\n/g' | mail -s DROPPED_MEMORY_DETECTED jhg-informatics@lists.johnshopkins.edu
+		echo $MEM_CHECK | sed 's/;/\n\n/g' | mail -s DROPPED_MEMORY_DETECTED -r jhg-informatics@lists.johnshopkins.edu jhg-informatics@lists.johnshopkins.edu
 	fi
 done
