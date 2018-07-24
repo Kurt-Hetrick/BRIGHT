@@ -56,7 +56,7 @@ set -o noclobber
 # I don't think I need to set /usr/bin, /bin, etc
 
 # eventually going to replace anaconda with one that I've compiled
-module load anaconda-python/2.7.12
+# module load anaconda-python/2.7.12
 module load java/1.8.0_112
 module load datamash/1.1.0
 module load parallel/20161222
@@ -80,5 +80,9 @@ module load gcc/5.1.0
 
 ###########################################
 ###########################################
+
+# temp fix to bad ananconda module that I initially had above
+export PATH="/mnt/linuxtools/ANACONDA/anaconda2-5.0.0.1/bin:$PATH"
+
 ## This will always put the current working directory in front of any directory for PATH
 export PATH=".:$PATH"
