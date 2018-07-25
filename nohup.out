@@ -1,4 +1,0 @@
-Null message body; hope that's ok
-gethostbyname(c6100-4) took 20 seconds and returns TRY_AGAIN
-
-error: sge_gethostbyname failed

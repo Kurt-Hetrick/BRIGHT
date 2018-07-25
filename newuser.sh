@@ -9,6 +9,12 @@ if [ ${#username} -eq 0 ]; then
     	exit 0
 fi
 
+excluded_users_regex="^(clinsequser|bmyers21|khetric1)$"
+
+if [[ $username =~ $excluded_users_regex ]] ; then
+    echo 'user '$username' is excluded, exiting...'
+    exit 1
+fi
 
 #Create the home and priv folder paths with username provided
 dir=/mnt/qadmin/users/$username
