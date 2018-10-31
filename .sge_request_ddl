@@ -1,0 +1,26 @@
+# Default priority when not specified
+
+-p -6
+
+# Default queue when not specified
+
+-q cgc.q
+
+# Minimum free resources required when submitting a job
+## 16 Gb are free at the start of the execution
+## job becomes terminated at 10.5 days
+
+-l mem_free=16G,h_rt=252:00:00
+
+# so you can't submit a job that can never be scheduled.
+# for some reason this is not working as intended...so taking it out.
+
+# -w e
+
+# tell sge to export the users environment variables
+
+-V
+
+# set qlogin to keep trying to login (no timeout)...this is actually the default for qsub
+
+-now n
