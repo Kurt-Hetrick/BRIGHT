@@ -33,7 +33,9 @@ do
 	ONLINE_CHECK=$(qstat -f -s r \
 		| egrep -v "^-|^[0-9]|^ " \
 		| sed -r 's/[[:space:]]+/\t/g' \
-		| awk 'BEGIN {FS="\t"};{OFS="\t"} $6=="au" {print $1, "IS IN AN ALERT/UNREACHABLE STATUS. CHECK, REBOOT IF NEEDED"}') ;
+		| awk 'BEGIN {FS="\t"};{OFS="\t"} \
+			$6~"au" {print $1, "IS IN AN ALERT/UNREACHABLE STATUS. CHECK, REBOOT IF NEEDED"} \
+			$6~"E" {print $1, "IS IN AN ERROR STATUS. CHECK, REBOOT IF NEEDED"}') ;
 
 		if [[ -z "$MEM_CHECK" ]]; then
 			:
