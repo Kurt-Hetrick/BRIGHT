@@ -1,5 +1,6 @@
 #!/bin/bash
 #GL script 3/27/2018
+#Khertic co auther
 
 #Prompt for username
 	read -p "Enter the User JHED ID: " username
@@ -25,7 +26,7 @@
 
 # CREATE A REGEX FOR DDL USERS. IF USERNAME IS DDL THEN SET THEM UP OTHERWISE SET THEM UP AS A NON-DDL USER.
 
-	ddl_users_regex="^(skight1|ktindal2|msherid3|khetric1-clinical)$"
+	ddl_users_regex="^(skight1|ktindal2|msherid3|ywang117|khetric1-clinical)$"
 
 # function for setting up standard (CIDR) users
 
