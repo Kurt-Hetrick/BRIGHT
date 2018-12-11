@@ -43,7 +43,8 @@ umask 0007
 
 # This sets the prompt
 # "$USER@HOSTNAME> "
-export PS1="\u@\h> "
+# export PS1="\u@\h> "
+export PS1="\u@\h~\W> "
 
 # protects against overwriting file with > redirect
 # can still force overwrite with >| redirect
