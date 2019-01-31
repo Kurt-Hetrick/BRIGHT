@@ -75,8 +75,7 @@ module load sublime_text/3.3143
 # these two are core modules for using bright, so I'm putting these last
 module load sge/2011.11p1
 # both the CC and CXX variables should really be exported within the gcc module, but I'm not doing that today
-module load gcc/5.1.0
-
+module load gcc/7.2.0
 
 ###########################################
 ###########################################
