@@ -31,7 +31,7 @@ do
 			$1=="Bright-VM"&&$5<7 {print $1 , "HAS" , $5 , "Gb RAM, WHICH IS LESS THAN IT SHOULD HAVE. PLEASE DRAIN, REBOOT AND UNDRAIN" ";"}') ;
 
 	ONLINE_CHECK=$(qstat -f -s r \
-		| egrep -v "^-|^[0-9]|^ " \
+		| egrep -v "queuename|^-|^[0-9]|^ " \
 		| sed -r 's/[[:space:]]+/\t/g' \
 		| awk 'BEGIN {FS="\t"};{OFS="\t"} \
 			$6~"a"||$6~"u" {print $1, "IS IN AN ALERT/UNREACHABLE STATUS. CHECK, REBOOT IF NEEDED"} \
