@@ -6,7 +6,7 @@ ROW_COUNT=$2 # LIST THE TOP X NUMBER OF FILE EXTENSIONS ORDERED BY SIZE. DEFAULT
 
 		if [[ ! $ROW_COUNT ]]
 			then
-			ROW_COUNT=500
+			ROW_COUNT=15
 		fi
 
 module load datamash
