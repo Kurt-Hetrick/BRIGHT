@@ -88,4 +88,4 @@ module load gcc/7.2.0
 ## I don't think that pushing out an anaconda prefix plays well with the DDL targeted panel pipeline
 
 ## This will always put the current working directory in front of any directory for PATH
-export PATH=".:$PATH"
+export PATH=".:$PATH:/bin"
