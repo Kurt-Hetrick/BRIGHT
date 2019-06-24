@@ -4,7 +4,7 @@
 
 # Default queue when not specified
 
--q rnd.q,bigdata.q
+-q rnd.q,bigdata.q,rhel7.q
 
 # Minimum free resources required when submitting a job
 ## 16 Gb are free at the start of the execution
