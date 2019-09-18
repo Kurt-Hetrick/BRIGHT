@@ -84,4 +84,4 @@ module load gcc/7.2.0
 export PATH="/mnt/linuxtools/ANACONDA/anaconda2-5.0.0.1/bin:$PATH"
 
 ## This will always put the current working directory in front of any directory for PATH
-export PATH=".:$PATH"
+export PATH=".:$PATH:/bin"
