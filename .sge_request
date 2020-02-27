@@ -8,7 +8,7 @@
 
 # Minimum free resources required when submitting a job
 ## 16 Gb are free at the start of the execution
-## job becomes terminated at 10.5 days
+## job becomes terminated at 3 days
 
 -l mem_free=16G,h_rt=72:00:00
 
