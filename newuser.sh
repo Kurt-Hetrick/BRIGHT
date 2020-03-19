@@ -26,7 +26,7 @@
 
 # CREATE A REGEX FOR DDL USERS. IF USERNAME IS DDL THEN SET THEM UP OTHERWISE SET THEM UP AS A NON-DDL USER.
 
-	ddl_users_regex="^(skight1|ktindal2|msherid3|ywang117|khetric1-clinical)$"
+	ddl_users_regex="^(skight1|ktindal2|msherid3|ywang117|khetric1-clinical|lfleet1)$"
 
 # CREATE A REGEX FOR CIDR GENETIC ANALYSTS GROUP
 
