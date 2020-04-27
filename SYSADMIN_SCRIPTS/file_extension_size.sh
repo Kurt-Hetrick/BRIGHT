@@ -12,8 +12,7 @@ ROW_COUNT=$2 # LIST THE TOP X NUMBER OF FILE EXTENSIONS ORDERED BY SIZE. DEFAULT
 module load datamash
 
 find $INPUT_DIRECTORY -type f -exec du -a {} + \
-| awk 'BEGIN {FS="."} {print $1,$NF}' \
-| sed -r 's/[[:space:]]+/\t/g' \
+| awk 'BEGIN {FS="."} {print $1 "\t" $NF}' \
 | sort -k 3,3 \
 | datamash -g 3 sum 1 \
 | sort -k 2,2nr \
