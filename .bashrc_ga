@@ -61,7 +61,8 @@ module load java/1.8.0_112
 module load datamash/1.1.0
 module load parallel/20161222
 module load perl/5.25.9
-module load R/3.5.1
+#module load R/3.5.1
+module load R/4.0.0
 module load tabix/0.2.6
 module load samtools/0.1.18
 module load vcftools/0.1.12b
